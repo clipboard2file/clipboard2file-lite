@@ -1,0 +1,49 @@
+{
+  "showFilenameBox": {
+    "message": "Показать поле для редактирования имени файла"
+  },
+  "showFormatToggleButton": {
+    "message": "Показать кнопку для изменения формата изображения"
+  },
+  "defaultFilename": {
+    "message": "Имя файла по умолчанию"
+  },
+  "defaultFileType": {
+    "message": "Формат изображения по умолчанию"
+  },
+  "jpegQuality": {
+    "message": "Качество JPG"
+  },
+  "customFilenameLabel": {
+    "message": "Пользовательское имя файла"
+  },
+  "customPlaceholder": {
+    "message": "Введите имя файла здесь"
+  },
+  "formattedTime": { "message": "Форматированное время" },
+  "unixTimestamp": { "message": "Необработанная метка времени" },
+  "custom": { "message": "Пользовательское" },
+  "save": { "message": "Сохранить" },
+  "showAllFiles": { "message": "Показать все файлы" },
+  "enableImagePaste": { "message": "Включить вставку изображений" },
+  "enableTextPaste": { "message": "Включить вставку текста" },
+  "textExtensionLabel": { "message": "Расширение файла по умолчанию" },
+  "imageSettings": { "message": "Изображения" },
+  "textSettings": { "message": "Текст" },
+  "clearOnPasteImage": {
+    "message": "Очистить буфер обмена после загрузки изображения"
+  },
+  "clearOnPasteText": {
+    "message": "Очистить буфер обмена после загрузки текста"
+  },
+  "themeLabel": { "message": "Тема" },
+  "themeAuto": { "message": "Авто" },
+  "themeLight": { "message": "Светлая" },
+  "themeDark": { "message": "Темная" },
+  "firefoxTipTitle": {
+    "message": "Совет: Clipboard2File лучше работает в Firefox"
+  },
+  "firefoxTipGetFirefox": { "message": "Скачать Firefox" },
+  "firefoxTipHide": { "message": "Скрыть подсказку" },
+  "firefoxTipLogoAlt": { "message": "Логотип Firefox" }
+}

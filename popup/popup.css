@@ -1,0 +1,280 @@
+:root {
+  --focus-ring: #0061e0;
+  --focus-ring-dark: #00ddff;
+
+  --popup-bg: light-dark(#ffffff, #42414d);
+  --popup-border: light-dark(#cfcfd8, #52525e);
+  --popup-shadow: light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2));
+
+  --preview-bg: light-dark(rgba(0, 0, 0, 0.05), transparent);
+  --preview-text-bg: light-dark(transparent, #2b2a33);
+  --preview-text-color: light-dark(#15141a, #fbfbfe);
+  --preview-focus: light-dark(var(--focus-ring), var(--focus-ring-dark));
+
+  --filename-bg: light-dark(#f0f0f4, #1c1b22);
+  --filename-text: light-dark(#15141a, #fbfbfe);
+  --filename-focus: var(--focus-ring);
+
+  --toggle-text: light-dark(#15141a, #ffffff);
+  --toggle-bg: light-dark(rgba(21, 20, 26, 0.07), #3c3c3c);
+  --toggle-bg-hover: light-dark(rgba(21, 20, 26, 0.14), #5a5a5a);
+
+  --floating-toggle-bg: light-dark(#ffffff, #1c1b22);
+  --floating-toggle-border: light-dark(var(--popup-border), #1c1b22);
+  --floating-toggle-bg-hover: light-dark(#e6e6e6, #2b2a33);
+  --floating-toggle-border-hover: light-dark(var(--popup-border), #2b2a33);
+
+  --button-text: light-dark(#ffffff, #1c1b22);
+  --button-bg: light-dark(var(--focus-ring), var(--focus-ring-dark));
+  --button-bg-hover: color-mix(in srgb, black 10%, var(--button-bg));
+  --button-bg-active: color-mix(in srgb, black 20%, var(--button-bg));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font: menu;
+  background: transparent;
+  text-rendering: optimizeLegibility;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  padding-block: 0;
+  font: inherit;
+  border: none;
+  border-radius: 4px;
+  outline-offset: 2px
+}
+
+#popup {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  width: 300px;
+  height: 250px;
+  padding: 8px;
+  background-color: var(--popup-bg);
+
+  &[data-format="png"] {
+    #filename::after {
+      content: ".png";
+    }
+
+    #formatToggle span::after,
+    #floatingFormatToggle span::after {
+      content: "PNG";
+    }
+  }
+
+  &[data-format="jpeg"] {
+    #filename::after {
+      content: ".jpg";
+    }
+
+    #formatToggle span::after,
+    #floatingFormatToggle span::after {
+      content: "JPG";
+    }
+  }
+}
+
+#preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--preview-bg);
+  border-radius: 4px;
+
+  #imagePreview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #textPreview {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    overflow: auto;
+    font-size: 12px;
+    color: var(--preview-text-color);
+    text-align: left;
+    white-space: pre;
+    word-break: normal;
+    background-color: var(--preview-text-bg);
+    user-select: none;
+  }
+
+  &:is(:hover, :focus-within) {
+    outline: 2px solid var(--preview-focus);
+  }
+
+  &:focus {
+    outline: 2px solid
+      color-mix(in srgb, black 10%, var(--preview-focus));
+  }
+}
+
+#filenameContainer {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  min-height: 38px;
+  overflow: hidden;
+  cursor: text;
+  background-color: var(--filename-bg);
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  &[hidden] {
+    display: none !important;
+  }
+
+  &:has(#filename:focus-within) {
+    border-color: var(--filename-focus);
+    outline: 2px solid var(--filename-focus);
+    outline-offset: -1px;
+  }
+
+  #filename {
+    display: inline-block;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-block: 9px;
+    padding-inline: 8px;
+    overflow: scroll;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--filename-text);
+    white-space: pre;
+    outline: none;
+    overscroll-behavior: none;
+    scrollbar-width: none;
+
+    &::after {
+      color: inherit;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &:not(:focus)::selection {
+      background: transparent;
+    }
+
+    &.empty {
+      &::before {
+        content: attr(data-placeholder);
+        color: inherit;
+        font-family: inherit;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      & > br {
+        display: none;
+      }
+    }
+  }
+}
+
+#formatToggle,
+#floatingFormatToggle {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding-block: 4px;
+  padding-inline: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--toggle-text);
+  text-transform: uppercase;
+  box-shadow: 0 0 4px
+    light-dark(transparent, rgba(0, 0, 0, 0.5));
+
+  span {
+    pointer-events: none;
+  }
+
+  &[hidden] {
+    display: none !important;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--button-bg);
+    outline-offset: 0px;
+  }
+}
+
+#formatToggle {
+  min-width: 42px;
+  min-height: 24px;
+  margin-inline-start: 6px;
+  margin-inline-end: 8px;
+  font-size: 12px;
+  background-color: var(--toggle-bg);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--toggle-bg-hover);
+  }
+}
+
+#floatingFormatToggle {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  min-width: 46px;
+  font-size: 13px;
+  background-color: var(--floating-toggle-bg);
+  border: 1px solid
+    var(--floating-toggle-border);
+  border-radius: 4px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+  }
+
+  &:hover {
+    background-color: var(--floating-toggle-bg-hover);
+    border-color: var(--floating-toggle-border-hover);
+  }
+}
+
+#showAllFiles {
+  min-height: 32px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+
+  &:hover {
+    background-color: var(--button-bg-hover);
+  }
+
+  &:active {
+    background-color: var(--button-bg-active);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--button-bg);
+    outline-offset: 2px;
+  }
+}

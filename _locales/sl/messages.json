@@ -1,0 +1,45 @@
+{
+  "showFilenameBox": {
+    "message": "Prikaži besedilno polje za urejanje imena datoteke"
+  },
+  "showFormatToggleButton": {
+    "message": "Prikaži gumb za spreminjanje formata slike"
+  },
+  "defaultFilename": {
+    "message": "Privzeto ime datoteke"
+  },
+  "defaultFileType": {
+    "message": "Privzeti format slike"
+  },
+  "jpegQuality": {
+    "message": "Kakovost JPG"
+  },
+  "customFilenameLabel": {
+    "message": "Ime datoteke po meri"
+  },
+  "customPlaceholder": {
+    "message": "Tukaj vnesite ime datoteke po meri"
+  },
+  "formattedTime": { "message": "Oblikovani čas" },
+  "unixTimestamp": { "message": "Surovi časovni žig" },
+  "custom": { "message": "Po meri" },
+  "save": { "message": "Shrani" },
+  "showAllFiles": { "message": "Prikaži vse datoteke" },
+  "enableImagePaste": { "message": "Omogoči lepljenje slik" },
+  "enableTextPaste": { "message": "Omogoči lepljenje besedila" },
+  "textExtensionLabel": { "message": "Privzeta končnica datoteke" },
+  "imageSettings": { "message": "Slike" },
+  "textSettings": { "message": "Besedilo" },
+  "clearOnPasteImage": { "message": "Počisti odložišče po nalaganju slike" },
+  "clearOnPasteText": { "message": "Počisti odložišče po nalaganju besedila" },
+  "themeLabel": { "message": "Tema" },
+  "themeAuto": { "message": "Samodejno" },
+  "themeLight": { "message": "Svetla" },
+  "themeDark": { "message": "Temna" },
+  "firefoxTipTitle": {
+    "message": "Namig: Clipboard2File deluje bolje v Firefox"
+  },
+  "firefoxTipGetFirefox": { "message": "Prenesi Firefox" },
+  "firefoxTipHide": { "message": "Skrij namig" },
+  "firefoxTipLogoAlt": { "message": "Logotip Firefox" }
+}

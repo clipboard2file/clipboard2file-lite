@@ -1,0 +1,49 @@
+{
+  "showFilenameBox": {
+    "message": "Mostrar caixa de texto para editar o nome do ficheiro"
+  },
+  "showFormatToggleButton": {
+    "message": "Mostrar botão para alterar o formato de imagem"
+  },
+  "defaultFilename": {
+    "message": "Nome do ficheiro predefinido"
+  },
+  "defaultFileType": {
+    "message": "Formato de imagem predefinido"
+  },
+  "jpegQuality": {
+    "message": "Qualidade JPG"
+  },
+  "customFilenameLabel": {
+    "message": "Nome do ficheiro personalizado"
+  },
+  "customPlaceholder": {
+    "message": "Digite o nome do ficheiro personalizado aqui"
+  },
+  "formattedTime": { "message": "Tempo formatado" },
+  "unixTimestamp": { "message": "Carimbo de tempo em bruto" },
+  "custom": { "message": "Personalizado" },
+  "save": { "message": "Guardar" },
+  "showAllFiles": { "message": "Mostrar todos os ficheiros" },
+  "enableImagePaste": { "message": "Ativar colagem de imagens" },
+  "enableTextPaste": { "message": "Ativar colagem de texto" },
+  "textExtensionLabel": { "message": "Extensão de ficheiro predefinida" },
+  "imageSettings": { "message": "Imagens" },
+  "textSettings": { "message": "Texto" },
+  "clearOnPasteImage": {
+    "message": "Limpar área de transferência após o envio da imagem"
+  },
+  "clearOnPasteText": {
+    "message": "Limpar área de transferência após o envio de texto"
+  },
+  "themeLabel": { "message": "Tema" },
+  "themeAuto": { "message": "Auto" },
+  "themeLight": { "message": "Claro" },
+  "themeDark": { "message": "Escuro" },
+  "firefoxTipTitle": {
+    "message": "Dica: Clipboard2File funciona melhor no Firefox"
+  },
+  "firefoxTipGetFirefox": { "message": "Obter o Firefox" },
+  "firefoxTipHide": { "message": "Ocultar dica" },
+  "firefoxTipLogoAlt": { "message": "Logótipo do Firefox" }
+}

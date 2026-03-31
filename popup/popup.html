@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" type="text/css" href="/popup/popup.css" />
+  </head>
+  <body tabindex="-1">
+    <div id="popup">
+      <div id="filenameContainer" hidden>
+        <div
+          id="filename"
+          contenteditable="plaintext-only"
+          spellcheck="false"
+        ></div>
+        <button id="formatToggle" type="button" hidden>
+          <span></span>
+        </button>
+      </div>
+      <button id="floatingFormatToggle" type="button" hidden>
+        <span></span>
+      </button>
+      <button id="preview">
+        <img tabindex="-1" id="imagePreview" draggable="false" />
+        <div tabindex="-1" id="textPreview" hidden></div>
+      </button>
+      <button id="showAllFiles">Show all files</button>
+    </div>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
